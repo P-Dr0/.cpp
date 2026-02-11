@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int h1(int k,int m){
+	return ((k % m) + m) % m;
+}
+
+int h2(int k,int m){
+	return 1 + (k % (m - 1));
+}
+
+int dhash(int k,int m,int i){
+	return (h1(k,m) + i * h2(k,m)) % m;
+}
+
+int main()
+{
+	int k;
+	int m;
+	int i = 0;
+	
+	cin >> k >> m;
+	
+	for(i = 0;i < m;i++){
+		cout << dhash(k,m,i) << " ";
+	}
+	
+	return 0;
+}
