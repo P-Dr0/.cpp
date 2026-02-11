@@ -68,5 +68,7 @@ int main() {
     }
 
     return 0;
+
+    //Complexidade total do programa O(n) para ler os dados dos gladiadores e O(1) para cada combate, resultando em O(n) + O(1) = O(n) no pior caso, onde n é o número de gladiadores.
     
 }
